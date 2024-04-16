@@ -7,7 +7,7 @@ const PhotoGrid: React.FC = () => {
   useEffect(() => {
     const fetchPhotos = async () => {
       try {
-        const response = await fetch(" ");
+        const response = await fetch("https://api.unsplash.com/photos/random?count=9&client_id=Y_sJwyzEEsYloHpGAWFoNwOY5qqsSHlARs0kbgyHOLg");
         const data = await response.json();
         const photoUrls = data.map((photo: any) => photo.urls.small);
         setPhotos(photoUrls);
